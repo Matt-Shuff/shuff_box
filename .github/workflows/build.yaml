@@ -1,0 +1,25 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - 'main'
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  build:
+    name: 'Build'
+    runs-on: ubuntu-latest
+    steps:
+      - name: "checkout"
+        uses: actions/checkout@v2
+      
+      - name: 'build'
+        uses: docker/build-push-action@v1
+        with:
+          registry: ghcr.io
+          username: "Matt-Shuff"
+          password: ${{ secrets.BUILD_PAT }}
+          repository: Matt-Shuff/shuff_box
+          tags: latest
