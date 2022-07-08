@@ -22,7 +22,7 @@ RUN apt-get install -y -qq \
     libgdbm-dev \
     libc6-dev \
     libbz2-dev \
-    readline \
+    libreadline-dev \
     liblzma-dev
 
 COPY scripts/omz.sh .
