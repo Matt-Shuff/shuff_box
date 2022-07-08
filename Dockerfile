@@ -21,7 +21,9 @@ RUN apt-get install -y -qq \
     tk-dev \
     libgdbm-dev \
     libc6-dev \
-    libbz2-dev
+    libbz2-dev \
+    readline \
+    liblzma-dev
 
 COPY scripts/omz.sh .
 COPY ./config/.zshrc .zshrc_temp
