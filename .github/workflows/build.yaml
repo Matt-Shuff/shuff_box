@@ -21,7 +21,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: create image from repository
-        run: docker build -t ghcr.io/${{ github.actor }}/<img-name> .
+        run: docker build -t ghcr.io/${{ github.actor }}/shuff_box .
 
       - name: push image to GitHub Container Registry
-        run: docker push ghcr.io/${{ github.actor }}/<img-name>:latest
+        run: docker push ghcr.io/${{ github.actor }}/shuff_box:latest
