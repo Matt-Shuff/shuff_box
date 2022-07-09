@@ -14,3 +14,5 @@ asdf global python latest
 asdf plugin-add azure-cli
 asdf install azure-cli latest
 asdf global azure-cli latest
+
+apt-get install ncat -y
